@@ -2,12 +2,14 @@
     <head>
         <title></title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script language="javascript" src="Bai10-CallbackFunction.js"></script>
-        <script language="javascript" src="Bai11-Bind.js"></script>
-        <script src="Bai12-ApplyAndCall.js"></script>
     </head>
-    <body>           
-        <input type="button" id="clickme" value="Click me"/>
+    <body>     
+    </br>      
+        <input type="button" id="clickme" value="Click me"/>  
+        <button onclick="myFunction()">Show ranking</button>  
+        <p id="rank"></p>
+        <p id="demo"></p>
+        
         <script>       
 
         var button = document.getElementById('clickme');
@@ -15,7 +17,24 @@
         {
             alert("Hello World");
         });
-       
+        function myFunction(){
+
+            var arr = ["Djokovic", "Nadal", "Federer", "Thiem", "Medvedev"];
+            var txt = "";
+            arr.forEach(feFunction);        
+            document.getElementById("rank").innerHTML = txt;
+            function feFunction(value, index) {
+            txt = txt + value + "<br>";
+        }
+        // var ranks = document.getElementById("rank");
+        // ranks.innerHTML = txt;
+        }
         </script>
     </body>
+    <script language="javascript" src="Bai09-XuLyLoiVoiTryCatch.js"></script>
+        <script language="javascript" src="Bai10-CallbackFunction.js"></script>
+        <script language="javascript" src="Bai11-Bind.js"></script>
+        <script src="Bai12-ApplyAndCall.js"></script>
+        <script src="Bai13-JS_ES5.js"></script>
+        <script src="Bai14-JS_ES6.js"></script>
 </html>

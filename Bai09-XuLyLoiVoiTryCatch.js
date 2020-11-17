@@ -1,4 +1,5 @@
 // basic try catch
+console.log("Xử lý lỗi với Try - Catch:");
 var stn = 0;
 try{
     if(stn > 0)

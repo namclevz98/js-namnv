@@ -1,4 +1,5 @@
 // call
+console.log("call() and apply():");
 function player(name, age) {
     this.name = name;
     this.age = age;

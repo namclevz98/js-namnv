@@ -1,4 +1,5 @@
 // basic callback
+console.log("Callback function:");
 var keywords = ["Djokovic", "Nadal", "Federer", "Thiem"];
 keywords.forEach(function(eachName, index){
     console.log(index + 1 + ". " + eachName);
@@ -52,32 +53,3 @@ changeAge(playerInfo.setAge, playerInfo);
 
 document.write("</br>" + playerInfo.name + ", " + playerInfo.age);
 
-// multiple callback
-function1 = (callback1, callback2, callback3) => {
-    setTimeout(() => {
-      console.log("function 1 timed out!");
-      callback1(callback2, callback3);
-    }, 1500);
-  }
-  
-  function2 = (callback1, callback2) => {
-    setTimeout(() => {
-      console.log("function 2 timed out!");
-      callback1(callback2);
-    }, 1500);
-  }
-  
-  function3 = (callback1) => {
-    setTimeout(() => {
-      console.log("function 3 timed out!")
-      callback1()
-    }, 1500);
-  }
-  
-  function4 = () => {
-    setTimeout(() => {
-      console.log("function 4 timed out!")
-    }, 1500);
-  }
-  
-  function1(function2, function3, function4);

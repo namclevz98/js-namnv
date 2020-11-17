@@ -1,3 +1,4 @@
+console.log("/nBind: /n");
 var playerInfo = {
     name: "Djokovic",
     age: 32,
