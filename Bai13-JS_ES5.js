@@ -29,10 +29,9 @@ console.log(str1.substr(17,3)); // String.substr(start, +index);
 var arr = ["Djokovic", "Nadal", "Federer", "Thiem", "Medvedev"];
 console.log("Array là 1 mảng? " + Array.isArray(arr));
 console.log("ATP Ranking");
-arr.forEach(funcForEach);
-function funcForEach(value, index) {
+arr.forEach(function(value,index) {
     console.log(index + 1, value);
-}
+})
 
 // Array.map(function(value, index, array)) - trả về 1 mảng
 var numbers1 = [1, 2, 3, 4, 5];
@@ -41,6 +40,10 @@ var mul2 = numbers1.map(funcMultiple2);
 function funcMultiple2(value, index, array){
     return value *2;
 }
+mul2 = numbers1.map(function(value) {
+    return value *2;
+})
+mul2 = numbers1.map(value => value * 2);
 console.log("Nhân mảng với 2: " + mul2);
 
 // Array.filter(function(value, index, array)) - trả về 1 mảng đạt điều kiện
@@ -48,6 +51,10 @@ var over2 = numbers1.filter(funcFilter2);
 function funcFilter2(value){
     return value > 2;
 }
+over2 = numbers1.filter(function(value){
+    return value > 2;
+})
+over2 = numbers1.filter(value => value > 2);
 console.log("Mảng với giá trị > 2: " + over2);
 
  // Array.reduce(function(total, value, index, array)) - trả về 1 giá trị (total: giá trị khởi tạo/vừa được trả về)
@@ -102,9 +109,9 @@ console.log("Languague: " + no1.languague);
 // Object.defineProperty
 Object.defineProperty(no1, "languague", {
     value: "Srbja",
-    writable: true, // có thể thay đổi value
-    enumerable: true,  // có thể được liệt kê (hiển thị)
-    configurable: true // có thể được cấu hình lại
+    writable: true,                 // có thể thay đổi value
+    enumerable: true,               // có thể được liệt kê (hiển thị)
+    configurable: true              // có thể được cấu hình lại
 }) // sửa lại thuộc tính trong object
 Object.defineProperty(no1, "description", {
     get : function() {
@@ -113,5 +120,4 @@ Object.defineProperty(no1, "description", {
 }) // thêm thuộc tính trong object
 console.log(no1.languague);
 console.log(no1);
-
 console.log(no1.firstName.charAt(0), no1.firstName[0]);

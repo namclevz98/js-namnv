@@ -34,10 +34,21 @@ const players = ["Djokovic", "Nadal", "Federer"];
 players[2] = "Thiem";                            // có thể khai báo lại giá trị phần tử trong const array
 // players = ["Djoker", "Nadal", "Federer"];     // lỗi do không thể khai báo lại giá trị array
 console.log(players);
-players.forEach(rankFunction);
-function rankFunction(value,index){
+players.forEach(function(value,index) {
     console.log(index + 1 + " " + value + "\n");
-};
+});
+
+// find, findIndex
+
+var djokovic = players.find(function(value) {
+    return value == "Djokovic";
+})
+var nadal = players.findIndex(function(value) {
+    return value == "Nadal";
+})
+console.log(djokovic);
+console.log("Nadal's index: " + nadal);
+
 
 // arrow function
 // arrow function ko chứa "this" - windows object
@@ -70,7 +81,21 @@ class Player {
 }
 let player1 = new Player("Djokovic", 1987);
 let player2 = new Player("Nadal", 1986);
-console.log(player1.name + ", " + player1.age());
+console.log("No1 ATP: " + player1.name + ", " + player1.age());
+
+var allPlayers = [];
+allPlayers[0] = new Player("Djokovic", 1987);
+allPlayers[1] = new Player("Nadal", 1986);
+for ( let i = 2 ; i < 10 ; i++)
+{
+    var player = new Player ("Player" + i, 1990 - i);
+    allPlayers.push(player);
+}
+console.log("List of all players:")
+for ( let i = 0 ; i < 10 ; i++)
+{
+    console.log(allPlayers[i].name + ", " + allPlayers[i].age());
+}
 
 let myPromise = new Promise(function(myResolve,myReject) {
     setTimeout(function() {
