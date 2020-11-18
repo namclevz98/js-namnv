@@ -4,6 +4,13 @@
 "use strict";
 /*
 x = "Hello"; // lỗi do x chưa được khai báo
+không được delete 1 biến/object/function
+không được dùng hệ 8 (otal)
+không thể đặt thuộc tính read-only (writable:false)
+không thể viết get only
+các từ khóa eval,this, with, ..
+
+
 */
 
 
